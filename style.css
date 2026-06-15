@@ -1,5 +1,5 @@
 /* ==========================================================================
-   🎨 1. CONFIGURATION GLOBALE & VARIABLES
+   🎨 PARTIE 1 : CONFIGURATION GLOBALE, NAVBAR & HERO
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -15,16 +15,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Conteneur principal fluide et large */
 .store-container {
     width: 96%;
     max-width: 1600px;
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   🚀 2. BARRE DE NAVIGATION (HEADER)
-   ========================================================================== */
+/* 🚀 BARRE DE NAVIGATION (HEADER) */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -80,54 +77,219 @@ body {
     font-size: 0.85rem;
 }
 
-/* ==========================================================================
-   📢 3. SECTION HERO (ACCUEIL)
-   ========================================================================== */
-.hero-banner {
-    text-align: center;
-    padding: 40px 20px;
-    background: radial-gradient(circle, rgba(31,40,51,0.6) 0%, rgba(11,12,16,1) 100%);
+/* 📢 NEW HERO BANNER CONVERSION-OPTIMIZED */
+.hero-banner-new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 4%;
+    background: radial-gradient(circle at 70% 50%, rgba(69, 243, 255, 0.08) 0%, rgba(11,12,16,1) 70%);
+    border-bottom: 1px solid #1f2833;
 }
 
-.hero-container {
-    max-width: 800px;
-    margin: 0 auto;
+.hero-text-content {
+    flex: 1.2;
+    max-width: 650px;
 }
 
-.hero-banner h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    color: #ffffff;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.hero-desc {
-    color: #a9b7c6;
-    line-height: 1.7;
-    font-size: 1.05rem;
+.hero-badges-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.shipping-badge {
-    display: inline-block;
-    background-color: rgba(197, 160, 89, 0.15);
+.hero-promo-badge {
+    background-color: rgba(197, 160, 89, 0.12);
     border: 1px solid #c5a059;
     color: #c5a059;
-    padding: 8px 18px;
+    padding: 6px 14px;
     border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: bold;
-    font-size: 0.9rem;
 }
 
+.hero-promo-badge.green {
+    background-color: rgba(37, 211, 102, 0.12);
+    border: 1px solid #25d366;
+    color: #25d366;
+}
+
+.hero-banner-new h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hero-banner-new h1 span {
+    color: #45f3ff;
+    text-shadow: 0 0 10px rgba(69, 243, 255, 0.3);
+}
+
+.hero-subtitle-new {
+    font-size: 1.15rem;
+    color: #a9b7c6;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero-prices-box {
+    background-color: #151a21;
+    border: 1px solid #1f2833;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.price-item-hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-item-hero span {
+    font-size: 0.75rem;
+    color: #a9b7c6;
+    text-transform: uppercase;
+}
+
+.price-item-hero strong {
+    font-size: 1.4rem;
+    color: #25d366;
+    font-weight: 800;
+}
+
+.hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(45deg, #ff9900, #ff5e62);
+    color: #ffffff;
+    padding: 16px 35px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255, 94, 98, 0.3);
+}
+
+.hero-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.5);
+}
+
+.hero-media-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-main-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(69, 243, 255, 0.25));
+    animation: floatingEffect 4s ease-in-out infinite;
+}
+
+@keyframes floatingEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
 /* ==========================================================================
-   📱 4. NAVIGATION PAR ONGLET
+   ⚙️ PARTIE 2 : ARGUMENTS DE VENTE & STRUCTURE DES ONGLETS
    ========================================================================== */
+/* 🛡️ SECTION ARGUMENTS DE VENTE (POURQUOI NOUS CHOISIR) */
+.features-section {
+    padding: 50px 4%;
+    background-color: #0b0c10;
+    text-align: center;
+}
+
+.section-title-new {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-new::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #45f3ff;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.features-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature-card-new {
+    background-color: #151a21;
+    border: 1px solid #1f2833;
+    padding: 25px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feature-card-new:hover {
+    border-color: #45f3ff;
+    transform: translateY(-5px);
+}
+
+.feature-icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(69, 243, 255, 0.08);
+    border: 1px solid rgba(69, 243, 255, 0.2);
+    color: #45f3ff;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+.feature-card-new h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.feature-card-new p {
+    font-size: 0.85rem;
+    color: #a9b7c6;
+    line-height: 1.5;
+}
+
+/* 📱 ONGLETS NAVIGATION (TABS) */
 .tabs-navigation {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin: 20px 0 30px 0;
+    margin: 40px 0 30px 0;
     padding: 0 10px;
 }
 
@@ -154,16 +316,14 @@ body {
     box-shadow: 0 0 15px rgba(69, 243, 255, 0.2);
 }
 
-/* ==========================================================================
-   💻 5. ARCHITECTURE EN 2 COLONNES (VIDÉO À GAUCHE)
-   ========================================================================== */
+/* 💻 DISPOSITION DOUBLE COLONNE DU CATALOGUE */
 .main-layout-wrapper {
     display: flex;
     gap: 40px;
     align-items: flex-start;
 }
 
-/* Colonne de Gauche : Conteneur de la Vidéo Fixe */
+/* Colonne gauche (Vidéo collée) */
 .store-video-side {
     flex: 1;
     min-width: 260px;
@@ -201,14 +361,14 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     background-color: #0b0c10;
 }
-/* Colonne de Droite : Catalogue dynamique */
+
+/* Colonne droite (Grille des produits) */
 .store-catalog-side {
     flex: 3.8;
     width: 100%;
 }
-
 /* ==========================================================================
-   📦 6. CONTENEURS DE BLOCS & BLOCS RÉSIDUELS
+   🖼️ PARTIE 3 : GRILLES PRODUITS, COLLECTIONS & TEMOIGNAGES
    ========================================================================== */
 .tab-pane {
     display: none;
@@ -257,9 +417,7 @@ body {
     line-height: 1.5;
 }
 
-/* ==========================================================================
-   🖼️ 7. GRILLE DE PRODUITS ET CARTES INDIVIDUELLES
-   ========================================================================== */
+/* 🎨 GRILLE DES CARTES DE PRODUITS */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
@@ -327,7 +485,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* Boutons principaux d'achat */
 .buy-action-btn {
     width: 100%;
     background: linear-gradient(45deg, #ff9900, #ff5e62);
@@ -348,7 +505,6 @@ body {
     box-shadow: 0 0 10px rgba(255, 153, 0, 0.4);
 }
 
-/* Boutons "Voir plus" */
 .see-more-btn {
     background-color: transparent;
     border: 1px solid #45f3ff;
@@ -367,80 +523,82 @@ body {
     box-shadow: 0 0 15px rgba(69, 243, 255, 0.3);
 }
 
-/* ==========================================================================
-   🌐 8. BOUTONS DE RÉSEAUX SOCIAUX & CONTACT
-   ========================================================================== */
-.social-networks-box {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #1f2833;
+/* ⭐ SECTION TÉMOIGNAGES (AVIS CLIENTS) */
+.reviews-section {
+    padding: 50px 4%;
+    background-color: #151a21;
+    border-radius: 12px;
+    border: 1px solid #1f2833;
+    margin-top: 40px;
+    text-align: center;
 }
 
-.social-networks-box h4 {
-    font-size: 0.9rem;
-    color: #ffffff;
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background-color: #0b0c10;
+    border: 1px solid #1f2833;
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+}
+
+.stars {
+    color: #ff9900;
+    font-size: 0.95rem;
     margin-bottom: 10px;
 }
-
-.social-links-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* ==========================================================================
+   📋 PARTIE 4 : TEXTES DES AVIS, FORMULAIRES, WHATSAPP FLOTTANT & RESPONSIVE
+   ========================================================================== */
+.review-card p {
+    font-size: 0.95rem;
+    color: #ecf0f1;
+    font-style: italic;
+    line-height: 1.5;
 }
 
-.social-link {
-    width: 100%;
-    display: inline-flex;
+.review-author {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: #45f3ff;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 🟢 BOUTON WHATSAPP FLOTTANT PERMANENT EN BAS À DROITE */
+.whatsapp-floating-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 200;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.fb-btn {
-    background-color: rgba(79, 172, 254, 0.1);
-    border: 1px solid #00f2fe;
-    color: #00f2fe;
+.whatsapp-floating-btn:hover {
+    transform: scale(1.1);
+    background-color: #1ebd54;
 }
 
-.fb-btn:hover {
-    background-color: #00f2fe;
-    color: #0b0c10;
-    box-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
-}
-
-.tk-btn {
-    background-color: rgba(255, 94, 98, 0.1);
-    border: 1px solid #ff5e62;
-    color: #ff5e62;
-}
-
-.tk-btn:hover {
-    background-color: #ff5e62;
-    color: #0b0c10;
-    box-shadow: 0 0 10px rgba(255, 94, 98, 0.4);
-}
-
-.wa-btn {
-    background-color: rgba(37, 211, 102, 0.1);
-    border: 1px solid #25d366;
-    color: #25d366;
-}
-
-.wa-btn:hover {
-    background-color: #25d366;
-    color: #0b0c10;
-    box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
-}
-
-/* ==========================================================================
-   📋 9. MODAL FORMULAIRE DE COMMANDE
-   ========================================================================== */
+/* 📋 STRUCTURE DU FORMULAIRE QUICK ORDER MODAL */
 .modal-form-overlay {
     display: none;
     position: fixed;
@@ -459,8 +617,8 @@ body {
     background-color: #151a21;
     border: 2px solid #45f3ff;
     width: 90%;
-    max-width: 450px;
-    padding: 30px;
+    max-width: 440px;
+    padding: 25px;
     border-radius: 12px;
     position: relative;
     box-shadow: 0 0 25px rgba(69, 243, 255, 0.25);
@@ -471,23 +629,23 @@ body {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #a9b7c6;
     cursor: pointer;
 }
 
 .modal-form-box h3 {
-    margin-bottom: 5px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #ffffff;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .modal-product-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #a9b7c6;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-bottom: 1px solid #1f2833;
     padding-bottom: 10px;
 }
@@ -549,14 +707,7 @@ body {
     gap: 10px;
 }
 
-.submit-order-btn:hover {
-    background-color: #1ebd54;
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-}
-
-/* ==========================================================================
-   🖼️ 10. LIGHTBOX (AGRANDISSEMENT D'IMAGES) & MEDIA QUERIES
-   ========================================================================== */
+/* 🖼️ LIGHTBOX MODAL */
 .lightbox-modal {
     display: none;
     position: fixed;
@@ -588,8 +739,19 @@ body {
     cursor: pointer;
 }
 
-/* Adaptabilité Écrans Tactiles & Mobiles */
+/* 📱 RESPONSIVE SMARTPHONES ET TABLETTES (90%+ DE CONVERSION TRAFIC) */
 @media (max-width: 992px) {
+    .hero-banner-new {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 4%;
+    }
+    .hero-badges-wrapper {
+        justify-content: center;
+    }
+    .hero-banner-new h1 {
+        font-size: 2.2rem;
+    }
     .main-layout-wrapper {
         flex-direction: column;
     }
@@ -597,7 +759,7 @@ body {
         position: static;
         max-width: 100%;
         order: -1;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         margin-left: 0;
     }
 }
@@ -605,4 +767,100 @@ body {
 @keyframes showUp {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
+}
+/* ==========================================================================
+   🎯 CONFIGURATION DOUBLE CARTE KRATOS (HERO SECTION)
+   ========================================================================== */
+.hero-banner-new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 4%;
+    background: radial-gradient(circle at 70% 50%, rgba(69, 243, 255, 0.08) 0%, rgba(11,12,16,1) 70%);
+    border-bottom: 1px solid #1f2833;
+}
+
+.hero-double-products {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1.2;
+    width: 100%;
+}
+
+.hero-product-showcase-card {
+    background-color: #151a21 !important;
+    border: 1px solid #1f2833 !important;
+    border-radius: 12px !important;
+    padding: 20px 15px !important;
+    text-align: center;
+    flex: 1 !important;
+    min-width: 180px;
+    max-width: 260px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+.hero-product-showcase-card:hover {
+    border-color: #45f3ff !important;
+    transform: translateY(-4px);
+}
+
+.hero-img-box-wrapper {
+    width: 100%;
+    height: 190px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background-color: #0b0c10;
+    border: 1px solid #1f2833;
+}
+
+.hero-product-showcase-card .hero-main-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    animation: none !important;
+}
+
+.hero-product-showcase-card h4 {
+    font-size: 0.95rem !important;
+    color: #ffffff !important;
+    margin-bottom: 6px !important;
+    font-weight: 700;
+}
+
+.hero-card-price-display {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: #25d366 !important;
+    margin-bottom: 12px !important;
+}
+
+.hero-card-buy-btn {
+    padding: 10px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+}
+
+/* Version responsive pour s'empiler proprement sur smartphone */
+@media (max-width: 768px) {
+    .hero-double-products {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    .hero-product-showcase-card {
+        width: 100% !important;
+        max-width: 260px !important;
+    }
 }
