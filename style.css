@@ -8,11 +8,69 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ==========================================================================
+   🎨 ARRIÈRE-PLAN AVEC LOGO GAMEDOCK 3D EN FILIGRANE TRANSPARENT
+   ========================================================================== */
+/* ==========================================================================
+   🎨 INCORPORATION ULTRA-TRANSPARENTE SANS FOND BLANC (FULL SCREEN)
+   ========================================================================== */
 body {
     background-color: #0b0c10;
+    /* On utilise l'image du logo */
+    background-image: url("logo.jpeg"); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 850px auto !important;
+    background-attachment: fixed;
+    
+    /* 🌟 EFFET SANS FOND : Élimine numériquement l'arrière-plan blanc de la photo */
+    background-blend-mode: screen; 
+    
     color: #ecf0f1;
     padding-bottom: 60px;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Assombrissement global pour que les textes restent parfaitement lisibles (Conversion) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Applique un filtre sombre semi-transparent par-dessus le logo fusionné */
+    background-color: rgba(11, 12, 16, 0.88); 
+    z-index: -1; 
+    pointer-events: none;
+}
+
+/* Mode mobile optimisé TikTok & Facebook Ads */
+@media (max-width: 768px) {
+    body {
+        background-size: 340px auto !important;
+    }
+}
+
+/* Effet magique d'assombrissement pour rendre le logo transparent et discret arrière-plan */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 12, 16, 0.93); /* Plus ce chiffre est élevé, plus le logo est transparent */
+    z-index: -1; /* Reste sagement derrière tous vos textes et images produits */
+    pointer-events: none;
+}
+
+/* Adaptation automatique pour les smartphones (Reels, TikTok, Facebook Ads) */
+@media (max-width: 768px) {
+    body {
+        background-size: 280px auto; /* Taille réduite sur mobile pour être parfaitement centré */
+    }
 }
 
 .store-container {
@@ -862,5 +920,142 @@ body {
     .hero-product-showcase-card {
         width: 100% !important;
         max-width: 260px !important;
+    }
+}
+/* ==========================================================================
+   🎯 CORRECTIF GRILLE DU HAUT ET FIXATION ABSOLUTE DU CARROUSEL
+   ========================================================================== */
+
+/* Force l'affichage en 2 colonnes strictes sur PC */
+.hero-banner-new {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    align-items: center !important;
+    gap: 40px !important;
+    padding: 60px 5% !important;
+    background: radial-gradient(circle at 70% 50%, rgba(69, 243, 255, 0.08) 0%, rgba(11,12,16,1) 70%);
+    border-bottom: 2px solid #1f2833 !important;
+    width: 100% !important;
+}
+
+/* Zone d'accueil étanche de la colonne de droite */
+.hero-carousel-container {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    height: 440px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Conteneur de superposition des 3 cartes */
+.hero-double-products {
+    position: relative !important;
+    width: 270px !important;
+    height: 420px !important;
+    margin: 0 auto !important;
+}
+
+/* Style de base d'une carte Kratos */
+.hero-product-showcase-card {
+    display: none !important; /* Masqué par défaut */
+    width: 270px !important;
+    height: 410px !important;
+    background-color: #151a21 !important;
+    border: 1px solid #1f2833 !important;
+    border-radius: 12px !important;
+    padding: 20px 15px !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    
+    /* Empilement absolu maitrisé au même endroit exact */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* Affiche uniquement la version active */
+.hero-product-showcase-card.active {
+    display: flex !important;
+    animation: fadeEffectShow 0.3s ease-out;
+}
+
+/* Alignement parfait des flèches au ras de la carte */
+.carousel-nav-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: rgba(21, 26, 33, 0.95) !important;
+    color: #45f3ff !important;
+    border: 1px solid #45f3ff !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer !important;
+    font-size: 1.1rem !important;
+    z-index: 99 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.carousel-nav-arrow.prev { left: -5px !important; }
+.carousel-nav-arrow.next { right: -5px !important; }
+
+.carousel-nav-arrow:hover {
+    background: #45f3ff !important;
+    color: #0b0c10 !important;
+    box-shadow: 0 0 10px #45f3ff;
+}
+
+/* Empilement propre pour les smartphones */
+@media (max-width: 850px) {
+    .hero-banner-new {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        padding: 40px 4% !important;
+    }
+    .hero-badges-wrapper { justify-content: center !important; }
+    .hero-carousel-container { margin-top: 30px !important; }
+}
+
+@keyframes fadeEffectShow {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* ==========================================================================
+   📺 BLINDAGE TOTAL ET NETTOYAGE DES FONDS OPAQUES (ANTI-BLOC NOIR)
+   ========================================================================== */
+
+/* 1. On augmente proprement la taille du filigrane général */
+body {
+    background-size: 850px auto !important;
+}
+
+/* 2. On force la transparence absolue sur TOUTE la structure de la bannière */
+.hero-banner-new,
+.hero-text-content,
+.hero-carousel-container,
+.hero-double-products,
+.hero-double-products div,
+[class*="hero-"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 3. On préserve uniquement le fond sombre de la carte produit active pour qu'elle reste lisible */
+.hero-product-showcase-card {
+    background-color: #151a21 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6) !important;
+}
+
+/* 4. Adaptation parfaite pour les smartphones */
+@media (max-width: 768px) {
+    body {
+        background-size: 340px auto !important;
     }
 }
