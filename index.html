@@ -42,7 +42,7 @@
             <!-- VERSION STONE -->
             <div class="hero-product-showcase-card">
                 <div class="hero-img-box-wrapper">
-                    <img src="kratos 1 color.jpg" alt="Kratos Version Stone" class="hero-main-img">
+                    <img src="kratos 1 color.jpeg" alt="Kratos Version Stone" class="hero-main-img" onerror="this.src='kratos 1 color.jpg'">
                 </div>
                 <h4>Kratos - Version Stone</h4>
                 <div class="hero-card-price-display">249 DH</div>
@@ -54,7 +54,7 @@
             <!-- VERSION COLLECTOR -->
             <div class="hero-product-showcase-card">
                 <div class="hero-img-box-wrapper">
-                    <img src="kratos.jpg" alt="Kratos Version Collector" class="hero-main-img">
+                    <img src="kratos.jpeg" alt="Kratos Version Collector" class="hero-main-img" onerror="this.src='kratos.jpg'">
                 </div>
                 <h4>Kratos - Version Collector</h4>
                 <div class="hero-card-price-display">349 DH</div>
@@ -65,7 +65,8 @@
 
         </div>
     </section>
-    <!-- 🛡️ SECTION POURQUOI CHOISIR GAMEDOCK 3D ? (5 CARTES) -->
+
+    <!-- 🛡️ SECTION POURQUOI CHOISIR GAMEDOCK 3D ? -->
     <section class="features-section">
         <h2 class="section-title-new">Pourquoi choisir GameDock 3D ?</h2>
         <div class="features-grid-new">
@@ -96,7 +97,6 @@
             </div>
         </div>
     </section>
-
     <!-- NAVIGATION PAR ONGLET -->
     <div id="catalogue-section" style="padding-top: 20px;">
         <nav class="tabs-navigation">
@@ -109,7 +109,7 @@
     <!-- STRUCTURE PRINCIPALE EN DEUX COLONNES -->
     <div class="main-layout-wrapper store-container">
         
-        <!-- COLONNE DE GAUCHE : LA VIDÉO FIXE + RÉSEAUX -->
+        <!-- COLONNE DE GAUCHE : LA VIDÉO FIXE -->
         <aside class="store-video-side">
             <div class="video-sticky-box">
                 <h3>🔍 Zoom sur nos créations</h3>
@@ -129,7 +129,7 @@
             </div>
         </aside>
 
-        <!-- COLONNE DE DROITE : LE CATALOGUE DYNAMIQUE ÉPURÉ (SANS DOUBLON HORS SCRIPT) -->
+        <!-- COLONNE DE DROITE : LE CATALOGUE -->
         <main class="store-catalog-side">
             <section id="tab-manettes" class="tab-pane active">
                 
@@ -208,54 +208,28 @@
             </section>
         </main>
     </div>
-    <!-- 📋 MODAL FORMULAIRE DE COMMANDE RAPIDE -->
+
+    <!-- MODAL FORMULAIRE DE COMMANDE -->
     <div id="order-modal" class="modal-form-overlay">
         <div class="modal-form-box">
             <span class="close-form-btn" onclick="fermerFormulaireCommande()">&times;</span>
             <h3>Formulaire de Commande 🇲🇦</h3>
             <p id="modal-product-subtitle" class="modal-product-subtitle">Produit : </p>
-            
             <div id="quick-order-form">
                 <input type="hidden" id="form-product-title">
                 <input type="hidden" id="form-product-price">
-
-                <div class="input-group">
-                    <label for="client-name">Nom et Prénom :</label>
-                    <input type="text" id="client-name" placeholder="Ex: Ahmed Alami" required>
-                </div>
-                <div class="input-group">
-                    <label for="client-phone">Numéro de Téléphone :</label>
-                    <input type="tel" id="client-phone" placeholder="Ex: 0612345678" required>
-                </div>
-                <div class="input-group">
-                    <label for="client-city">Ville :</label>
-                    <input type="text" id="client-city" placeholder="Ex: Casablanca, Rabat..." required>
-                </div>
-                <div class="input-group">
-                    <label for="client-address">Adresse de livraison :</label>
-                    <textarea id="client-address" placeholder="Ex: Quartier, Rue, Numéro de maison..." required></textarea>
-                </div>
-
-                <div class="modal-total-display">
-                    Montant total (Paiement à la livraison) : <span id="form-total-price">0 DH</span>
-                </div>
-
+                <div class="input-group"><label>Nom et Prénom :</label><input type="text" id="client-name" placeholder="Ex: Ahmed Alami" required></div>
+                <div class="input-group"><label>Numéro de Téléphone :</label><input type="tel" id="client-phone" placeholder="Ex: 0612345678" required></div>
+                <div class="input-group"><label>Ville :</label><input type="text" id="client-city" placeholder="Ex: Casablanca, Rabat..." required></div>
+                <div class="input-group"><label>Adresse de livraison :</label><textarea id="client-address" placeholder="Ex: Quartier, Rue..." required></textarea></div>
+                <div class="modal-total-display">Montant total : <span id="form-total-price">0 DH</span></div>
                 <button type="button" id="btn-whatsapp-link" class="submit-order-btn" onclick="envoyerCommandeGoogleSheets()"><i class="fas fa-check"></i> Confirmer la commande</button>
             </div>
         </div>
     </div>
 
-    <!-- RECOUVREMENT LIGHTBOX IMAGES -->
-    <div id="image-lightbox" class="lightbox-modal" onclick="fermerImageEnGrand()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-target-img" class="lightbox-content" src="">
-    </div>
-
-    <!-- 🟢 BOUTON FLOATING WHATSAPP RE-STYLISÉ AVEC SON LOGO OFFICIEL -->
-    <a href="https://wa.me" class="whatsapp-floating-btn" target="_blank" aria-label="Contact WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <div id="image-lightbox" class="lightbox-modal" onclick="fermerImageEnGrand()"><span class="lightbox-close">&times;</span><img id="lightbox-target-img" class="lightbox-content" src=""></div>
+    <a href="https://wa.me" class="whatsapp-floating-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <script>
     const gamedockCatalog = {
         collector: [
@@ -295,6 +269,7 @@
             { id: 'csq1', title: 'Support Casque Kratos V1', price: 499, img: 'support casque kratos v1' }
         ]
     };
+
     let limitCollector = 5;
     let limitStone = 5;
     let limitClassics = 5;
@@ -335,16 +310,33 @@
     function chargerPlusClassics() { limitClassics = gamedockCatalog.classics.length; setupStoreFront(); }
 
     function renderGridHTML(productsList) {
-        return productsList.map(item => `
-            <div class="product-card">
-                <div class="product-img-box">
-                    <img src="${item.img}.jpg" alt="${item.title}" class="store-img" onclick="ouvrirImageEnGrand(this.src)">
+        return productsList.map(item => {
+            // التعديل السحري لتجربة الصيغ المختلفة تلقائياً بما يتوافق مع الخادم
+            let imageSrc = item.img + ".jpeg";
+            
+            // معالجة الحالات الخاصة لأسماء الملفات المزدوجة التي تظهر في صورتك
+            if (item.img === "danzo") { imageSrc = "danzo.jpeg.jpeg"; }
+            if (item.img === "call of duty") { imageSrc = "call of dutty.jpeg"; }
+
+            return `
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="${imageSrc}" alt="${item.title}" class="store-img" onclick="ouvrirImageEnGrand(this.src)" onerror="correctionFormatLocale(this, '${item.img}')">
+                    </div>
+                    <h4>${item.title}</h4>
+                    <div class="product-card-price">à seulement ${item.price} DH <br><span style="font-size:0.75rem; font-weight:normal; color:#a9b7c6;">(Livraison incluse)</span></div>
+                    <button class="buy-action-btn" onclick="ouvrirFormulaireCommande('${item.title}', ${item.price})">Commander maintenant</button>
                 </div>
-                <h4>${item.title}</h4>
-                <div class="product-card-price">à seulement ${item.price} DH <br><span style="font-size:0.75rem; font-weight:normal; color:#a9b7c6;">(Livraison incluse)</span></div>
-                <button class="buy-action-btn" onclick="ouvrirFormulaireCommande('${item.title}', ${item.price})">Commander maintenant</button>
-            </div>
-        `).join('');
+            `;
+        }).join('');
+    }
+
+    function correctionFormatLocale(imgElement, baseName) {
+        const currentSrc = imgElement.src;
+        if (currentSrc.endsWith('.jpeg')) { imgElement.src = baseName + '.jpg'; } 
+        else if (currentSrc.endsWith('.jpg')) { imgElement.src = baseName + '.png'; } 
+        else if (currentSrc.endsWith('.png')) { imgElement.src = baseName + '.JPG'; } 
+        else { imgElement.onerror = null; imgElement.src = 'logo.jpeg'; }
     }
 
     function ouvrirFormulaireCommande(productTitle, productPrice) {
