@@ -2,263 +2,179 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAMEDOCK 3D - Accessoires Gaming Premium</title>
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GAMEDOCK 3D | Level Up Your Setup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '972202135444394');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=972202135444394&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <body>
 
-    <!-- NAVBAR PREMIUM -->
     <header class="navbar">
         <div class="logo-container">
-            <img src="logo.jpeg" alt="Logo Gamedock3d" class="brand-logo">
+            <img src="logo.png" alt="Logo Gamedock3d" class="brand-logo" onerror="this.src='https://via.placeholder.com/50'">
             <div class="brand-names">
                 <span class="main-title">GAMEDOCK 3D</span>
-                <span class="sub-title">Accessoires Gaming Premium</span>
+                <span class="sub-title">Premium Setup Accessories</span>
             </div>
         </div>
-        <div class="shipping-header-badge">🚀 Livraison Gratuite Partout au Maroc</div>
+        <div class="shipping-header-badge"><i class="fas fa-bolt"></i> LIVRAISON GRATUITE 🇲🇦</div>
     </header>
 
-    <!-- 📢 SECTION HERO PHARE : CARROUSEL UNIFIÉ AVEC FLÈCHES ULTRA-STABLES -->
-    <section class="hero-banner-new">
-        
-        <!-- COLONNE GAUCHE : TEXTES PUBLICITAIRES -->
-        <div class="hero-text-content">
-            <div class="hero-badges-wrapper">
-                <span class="hero-promo-badge"><i class="fas fa-truck"></i> Livraison partout au Maroc</span>
-                <span class="hero-promo-badge green"><i class="fas fa-hand-holding-usd"></i> Paiement à la livraison</span>
-            </div>
-            <h1>Transformez votre setup en <span>pièce de collection</span></h1>
-            <p class="hero-subtitle-new">Créations exclusives inspirées du gaming, des mangas et de la pop culture. Des finitions uniques conçues pour sublimer vos manettes et casques.</p>
-            <button class="hero-cta-btn" onclick="scrollerVersProduits()">
-                <i class="fas fa-search"></i> EXPLORER TOUT LE CATALOGUE
-            </button>
-        </div>
-        
-        <!-- COLONNE DROITE : LE CARROUSEL NETTOYÉ ET VERROUILLÉ -->
-        <div class="hero-carousel-container">
-            <div class="hero-double-products">
-                
-                <!-- VERSION STONE -->
-                <div class="hero-product-showcase-card active">
-                    <div class="hero-img-box-wrapper">
-                        <img src="kratos 1 color.jpeg" alt="Kratos Version Stone" class="hero-main-img" onerror="this.src='kratos 1 color.jpg'">
-                    </div>
-                    <h4>Kratos - Version Stone</h4>
-                    <div class="hero-card-price-display">249 DH</div>
-                    <button class="buy-action-btn hero-card-buy-btn" onclick="ouvrirFormulaireCommande('Support Kratos Stone (Phare)', 249)">
-                        Commander maintenant
+    <section class="hero-slider-section">
+        <div class="slider-container">
+            
+            <div class="hero-slide active">
+                <div class="slide-img-box">
+                    <div class="glow-effect"></div>
+                    <img src="danzo.jpeg.jpeg" alt="Support Danzo Sharingan">
+                </div>
+                <div class="slide-info">
+                    <span class="slide-badge border-neon-red"><i class="fas fa-fire"></i> STOCK TRÈS LIMITÉ</span>
+                    <h2>Support Danzo <br><span class="text-neon-cyan">Sharingan Hand</span></h2>
+                    <p class="product-tagline">L'emblématique main aux Sharingans imprimée en haute résolution pour sublimer ta manette.</p>
+                    <div class="live-counter"><i class="fas fa-eye"></i> 14 gamers regardent ce produit en ce moment</div>
+                    <div class="slide-price">349 DH <span class="old-slide-price">449 DH</span></div>
+                    <button class="hero-cta-btn pulse-glow-btn" onclick="ouvrirFormulaireCommande('Support Danzo - Sharingan Hand', 349)">
+                        <i class="fas fa-shopping-basket"></i> COMMANDER DIRECTEMENT (COD)
                     </button>
                 </div>
-
-                <!-- VERSION COLLECTOR -->
-                <div class="hero-product-showcase-card">
-                    <div class="hero-img-box-wrapper">
-                        <img src="kratos.jpeg" alt="Kratos Version Collector" class="hero-main-img" onerror="this.src='kratos.jpg'">
-                    </div>
-                    <h4>Kratos - Version Collector</h4>
-                    <div class="hero-card-price-display">349 DH</div>
-                    <button class="buy-action-btn hero-card-buy-btn" onclick="ouvrirFormulaireCommande('Support Kratos Premium (Phare)', 349)">
-                        Commander maintenant
-                    </button>
-                </div>
-
-                <!-- VERSION CASQUE -->
-                <div class="hero-product-showcase-card">
-                    <div class="hero-img-box-wrapper">
-                        <img src="support casque kratos v1.jpeg" alt="Support Casque Kratos" class="hero-main-img" onerror="this.src='support casque kratos v1.jpg'">
-                    </div>
-                    <h4>Support Casque Kratos V1</h4>
-                    <div class="hero-card-price-display">499 DH</div>
-                    <button class="buy-action-btn hero-card-buy-btn" onclick="ouvrirFormulaireCommande('Support Casque Kratos V1', 499)">
-                        Commander maintenant
-                    </button>
-                </div>
-
             </div>
 
-            <!-- FLÈCHES DE NAVIGATION SÉCURISÉES SANS INTERFÉRENCE -->
-            <button class="carousel-nav-arrow prev" onclick="defilerSlide(-1); lancerMinuteurAutomatique();">❮</button>
-            <button class="carousel-nav-arrow next" onclick="defilerSlide(1); lancerMinuteurAutomatique();">❯</button>
+            <div class="hero-slide">
+                <div class="slide-img-box">
+                    <div class="glow-effect"></div>
+                    <img src="captain.jpeg" alt="Support Captain America">
+                </div>
+                <div class="slide-info">
+                    <span class="slide-badge border-neon-blue"><i class="fas fa-star"></i> ÉDITION COLLECTOR</span>
+                    <h2>Support Captain <br><span class="text-neon-cyan">America Edition</span></h2>
+                    <p class="product-tagline">Le bouclier et la force du premier Avenger pour porter ta manette de jeu comme un trophée.</p>
+                    <div class="live-counter"><i class="fas fa-eye"></i> 9 gamers regardent ce produit en ce moment</div>
+                    <div class="slide-price">349 DH <span class="old-slide-price">449 DH</span></div>
+                    <button class="hero-cta-btn pulse-glow-btn" onclick="ouvrirFormulaireCommande('Support Captain America - Collector', 349)">
+                        <i class="fas fa-shopping-basket"></i> COMMANDER DIRECTEMENT (COD)
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="slide-img-box">
+                    <div class="glow-effect"></div>
+                    <img src="kratos.jpeg" alt="Support Kratos God Of War">
+                </div>
+                <div class="slide-info">
+                    <span class="slide-badge border-neon-gold"><i class="fas fa-crown"></i> PIÈCE MYTHIQUE</span>
+                    <h2>Support Kratos <br><span class="text-neon-cyan">God of War Edition</span></h2>
+                    <p class="product-tagline">Invoque la puissance de Sparte sur ton bureau. Finitions agressives et robustesse divine.</p>
+                    <div class="live-counter"><i class="fas fa-eye"></i> 22 gamers regardent ce produit en ce moment</div>
+                    <div class="slide-price">349 DH <span class="old-slide-price">449 DH</span></div>
+                    <button class="hero-cta-btn pulse-glow-btn" onclick="ouvrirFormulaireCommande('Support Kratos - God of War Edition', 349)">
+                        <i class="fas fa-shopping-basket"></i> COMMANDER DIRECTEMENT (COD)
+                    </button>
+                </div>
+            </div>
+
         </div>
 
+        <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
     </section>
-    <!-- 🛡️ SECTION POURQUOI CHOISIR GAMEDOCK 3D ? -->
-    <section class="features-section">
-        <h2 class="section-title-new">Pourquoi choisir GameDock 3D ?</h2>
-        <div class="features-grid-new">
-            <div class="feature-card-new">
-                <div class="feature-icon-box" style="font-size: 2rem;">👑</div>
-                <h4>Créations exclusives</h4>
-                <p>Des designs uniques introuvables dans les magasins traditionnels.</p>
+
+    <section class="trust-badge-bar">
+        <div class="trust-item">
+            <div class="trust-icon-box"><i class="fas fa-hand-holding-usd"></i></div>
+            <div class="trust-text">
+                <h4>Paiement à la Livraison</h4>
+                <p>الدفع عند الاستلام tte confiance</p>
             </div>
-            <div class="feature-card-new">
-                <div class="feature-icon-box" style="font-size: 2rem;">✨</div>
-                <h4>Finitions premium</h4>
-                <p>Chaque pièce est traitée et peinte à la main avec un soin extrême.</p>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon-box"><i class="fas fa-truck-moving"></i></div>
+            <div class="trust-text">
+                <h4>Livraison Rapide Gratuite</h4>
+                <p>Chez toi en 24h à 48h partout au Maroc</p>
             </div>
-            <div class="feature-card-new">
-                <div class="feature-icon-box" style="font-size: 2rem;">🚚</div>
-                <h4>Livraison partout au Maroc</h4>
-                <p>Expédition rapide, sécurisée et suivie directement chez vous.</p>
-            </div>
-            <div class="feature-card-new">
-                <div class="feature-icon-box" style="font-size: 2rem;">💵</div>
-                <h4>Paiement à la livraison</h4>
-                <p>Aucun paiement en ligne requis. Vous inspectez et payez à la réception.</p>
-            </div>
-            <div class="feature-card-new">
-                <div class="feature-icon-box" style="font-size: 2rem;">💬</div>
-                <h4>Service client réactif</h4>
-                <p>Une équipe à votre écoute 7j/7 directement sur WhatsApp.</p>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon-box"><i class="fas fa-shield-alt"></i></div>
+            <div class="trust-text">
+                <h4>Qualité PLA+ Renforcé</h4>
+                <p>Plastique premium bio, ultra robuste</p>
             </div>
         </div>
     </section>
 
-    <!-- NAVIGATION PAR ONGLET -->
-    <div id="catalogue-section" style="padding-top: 20px;">
+    <div id="catalogue-section" class="tabs-container">
         <nav class="tabs-navigation">
-            <button id="btn-manettes" class="tab-button active" onclick="switchBoutiqueTab('manettes')">📱 Supports Manettes</button>
-            <button id="btn-casques" class="tab-button" onclick="switchBoutiqueTab('casques')">🎧 Supports Casques</button>
-            <button id="btn-figurines" class="tab-button" onclick="switchBoutiqueTab('figurines')">🎨 Figurines</button>
+            <button id="btn-manettes" class="tab-button active" onclick="switchBoutiqueTab('manettes')"><i class="fas fa-gamepad"></i> Supports Manettes</button>
+            <button id="btn-casques" class="tab-button" onclick="switchBoutiqueTab('casques')"><i class="fas fa-headphones"></i> Supports Casques</button>
         </nav>
     </div>
 
-    <!-- STRUCTURE PRINCIPALE EN DEUX COLONNES -->
     <div class="main-layout-wrapper store-container">
         
-        <!-- COLONNE DE GAUCHE : LA VIDÉO FIXE + RÉSEAUX SÉCURISÉS -->
-        <aside class="store-video-side">
-            <div class="video-sticky-box">
-                <h3>🔍 Zoom sur nos créations</h3>
-                <p>Aperçu de la robustesse de nos impressions 3D.</p>
-                <video id="promo-video" class="showcase-video" autoplay loop muted playsinline controls>
-                    <source src="promo.mp4" type="video/mp4">
-                    <source src="promo.mov" type="video/quicktime">
-                    Votre navigateur ne supporte pas la vidéo.
-                </video>
-                <div class="social-networks-box">
-                    <h4>Suivez Gamedock3d :</h4>
-                <!-- Réseaux Sociaux avec Liens Absolus Corrigés -->
-                <div class="social-networks-box">
-                    <h4>Suivez Gamedock3d :</h4>
-                    <div class="social-links-grid" style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
-                        <!-- Icône Facebook Officielle -->
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link fb-btn" style="background-color: #1877f2; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;" title="Facebook">
-                            <svg xmlns="http://w3.org" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                            </svg>
-                        </a>
-                        <!-- Icône TikTok Officielle -->
-                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link tk-btn" style="background-color: #010101; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; border: 1px solid #25d366;" title="TikTok">
-                            <svg xmlns="http://w3.org" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                            </svg>
-                        </a>
-                    </div>
+        <section id="tab-manettes" class="tab-pane active">
+            
+            <div class="collection-block">
+                <div class="collection-intro">
+                    <h2>🏆 Collection Collector <span class="price-tag">349 DH</span></h2>
                 </div>
+
+                <div class="video-promo-container">
+                    <video width="100%" controls autoplay loop muted playsinline>
+                        <source src="promo.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="products-grid mobile-scroll-x" id="grid-collector"></div>
             </div>
-        </aside>
 
-        <!-- COLONNE DE DROITE : LE CATALOGUE -->
-        <main class="store-catalog-side">
-            <section id="tab-manettes" class="tab-pane active">
-                <div class="collection-block">
-                    <div class="collection-intro">
-                        <h2>🏆 Collection Collector <span class="price-tag">349 DH — Livraison Incluse</span></h2>
-                        <p>Les modèles les plus demandés et peints à la main.</p>
-                    </div>
-                    <div class="products-grid" id="grid-collector"></div>
-                    <button id="see-more-collector" class="see-more-btn" onclick="chargerPlusCollector()" style="display: none; margin: 30px auto 0 auto;">Voir plus de produits ➔</button>
+            <div class="collection-block">
+                <div class="collection-intro">
+                    <h2>🪨 Collection Stone <span class="price-tag">249 DH</span></h2>
                 </div>
+                <div class="products-grid mobile-scroll-x" id="grid-stone"></div>
+            </div>
 
-                <div class="collection-block">
-                    <div class="collection-intro">
-                        <h2>🪨 Collection Stone <span class="price-tag">249 DH — Livraison Incluse</span></h2>
-                        <p>Inspirée de la puissance de la pierre. Épurée et brute.</p>
-                    </div>
-                    <div class="products-grid" id="grid-stone"></div>
-                    <button id="see-more-stone" class="see-more-btn" onclick="chargerPlusStone()" style="display: none; margin: 30px auto 0 auto;">Voir plus de produits ➔</button>
+            <div class="collection-block">
+                <div class="collection-intro">
+                    <h2>✨ Collection Classics <span class="price-tag">199 DH</span></h2>
                 </div>
+                <div class="products-grid mobile-scroll-x" id="grid-classics"></div>
+            </div>
 
-                <div class="collection-block">
-                    <div class="collection-intro">
-                        <h2>✨ Collection Classics <span class="price-tag">199 DH — Livraison Incluse</span></h2>
-                        <p>Des designs sobres pour organiser proprement votre bureau.</p>
-                    </div>
-                    <div class="products-grid" id="grid-classics"></div>
-                    <button id="see-more-classics" class="see-more-btn" onclick="chargerPlusClassics()" style="display: none; margin: 30px auto 0 auto;">Voir plus de produits ➔</button>
-                </div>
-            </section>
+        </section>
 
-            <section id="tab-casques" class="tab-pane">
-                <div class="collection-block">
-                    <div class="collection-intro">
-                        <h2>🎧 Supports Casques Premium <span class="price-tag">549 DH — Livraison Incluse</span></h2>
-                        <p>Sublimez votre casque audio gaming avec notre collection exclusive.</p>
-                    </div>
-                    <div class="products-grid" id="grid-casques"></div>
+        <section id="tab-casques" class="tab-pane">
+            
+            <div class="collection-block">
+                <div class="collection-intro">
+                    <h2>👑 Gamme Iconic <span class="price-tag">549 DH</span></h2>
                 </div>
-            </section>
+                <div class="products-grid mobile-scroll-x" id="grid-iconic"></div>
+            </div>
 
-            <section id="tab-figurines" class="tab-pane">
-                <div class="collection-block">
-                    <p style="text-align:center; color:#a9b7c6; padding: 20px; font-style: italic;">🎨 Figurines bientôt disponibles... Restez connectés !</p>
+            <div class="collection-block">
+                <div class="collection-intro">
+                    <h2>🔥 Gamme Rare <span class="price-tag">499 DH</span></h2>
                 </div>
-            </section>
+                <div class="products-grid mobile-scroll-x" id="grid-rare"></div>
+            </div>
 
-            <!-- SECTION AVIS CLIENTS -->
-            <section class="reviews-section">
-                <h3 class="section-title-new">Ce que disent nos clients</h3>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Produit magnifique, encore plus beau en vrai."</p>
-                        <span class="review-author">✓ Ahmed K. (Casablanca)</span>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Livraison rapide et qualité exceptionnelle."</p>
-                        <span class="review-author">✓ Youssef M. (Rabat)</span>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Mon setup a complètement changé."</p>
-                        <span class="review-author">✓ Amine T. (Marrakech)</span>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Finitions impressionnantes."</p>
-                        <span class="review-author">✓ Reda B. (Tanger)</span>
-                    </div>
-                </div>
-            </section>
-        </main>
+        </section>
+
     </div>
-    <!-- 📋 MODAL FORMULAIRE DE COMMANDE RAPIDE -->
+
     <div id="order-modal" class="modal-form-overlay">
         <div class="modal-form-box">
             <span class="close-form-btn" onclick="fermerFormulaireCommande()">&times;</span>
-            <h3>Formulaire de Commande 🇲🇦</h3>
+            <h3>Formulaire de Commande Rapide 🇲🇦</h3>
             <p id="modal-product-subtitle" class="modal-product-subtitle">Produit : </p>
             
             <div id="quick-order-form">
@@ -270,211 +186,220 @@ src="https://www.facebook.com/tr?id=972202135444394&ev=PageView&noscript=1"
                     <input type="text" id="client-name" placeholder="Ex: Ahmed Alami" required>
                 </div>
                 <div class="input-group">
-                    <label for="client-phone">Numéro de Téléphone :</label>
+                    <label for="client-phone">Téléphone (WhatsApp) :</label>
                     <input type="tel" id="client-phone" placeholder="Ex: 0612345678" required>
                 </div>
                 <div class="input-group">
                     <label for="client-city">Ville :</label>
-                    <input type="text" id="client-city" placeholder="Ex: Casablanca, Rabat..." required>
+                    <input type="text" id="client-city" placeholder="Ex: Casablanca, Marrakech, Rabat..." required>
                 </div>
                 <div class="input-group">
-                    <label for="client-address">Adresse de livraison :</label>
-                    <textarea id="client-address" placeholder="Ex: Quartier, Rue, Numéro de maison..." required></textarea>
+                    <label for="client-address">Quartier / Adresse de livraison :</label>
+                    <input type="text" id="client-address" placeholder="Ex: Hay Riad, Rue 4, N°12" required>
                 </div>
 
                 <div class="modal-total-display">
-                    Montant total (Paiement à la livraison) : <span id="form-total-price">0 DH</span>
+                    Total à payer à la livraison : <span id="form-total-price">0 DH</span>
                 </div>
 
-                <button type="button" id="btn-whatsapp-link" class="submit-order-btn" onclick="envoyerCommandeGoogleSheets()" style="background-color: #25d366; display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; border: none; padding: 14px; border-radius: 6px; color: #ffffff; font-weight: bold; font-size: 1.05rem; cursor: pointer;">
-                    <svg xmlns="http://w3.org" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.925h.004c4.368 0 7.926-3.559 7.93-7.93a7.9 7.9 0 0 0-2.327-5.567zm-5.607 11.3a6.6 6.6 0 0 1-3.34-.902l-.24-.144-2.486.652.665-2.421-.157-.251a6.6 6.6 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                    </svg> Confirmer la commande
+                <button type="button" id="btn-submit-order" class="submit-order-btn" onclick="envoyerCommandeGoogleSheets()">
+                    💥 CONFIRMER MA COMMANDE
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- RECOUVREMENT LIGHTBOX IMAGES -->
-    <div id="image-lightbox" class="lightbox-modal" onclick="fermerImageEnGrand()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-target-img" class="lightbox-content" src="">
-    </div>
+    <footer class="store-footer">
+        <div class="footer-content">
+            <h3>REJOINS LA COMMUNAUTÉ GAMEDOCK 3D</h3>
+            <p>Suis-nous sur nos réseaux pour ne rater aucun nouveau modèle exclusif et voir nos coulisses d'impression 3D !</p>
+            
+            <div class="social-links-container">
+                <a href="https://www.facebook.com/profile.php?id=61588801967259" target="_blank" rel="noopener noreferrer" class="social-badge fb-badge">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.tiktok.com/@gamedock3d" target="_blank" rel="noopener noreferrer" class="social-badge tt-badge">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://wa.me/212664601352?text=Bonjour%20GameDock%203D%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20produits" target="_blank" rel="noopener noreferrer" class="social-badge wa-badge">
+                    <i class="fab fa-whatsapp"></i> Contact WhatsApp
+                </a>
+            </div>
 
-    <!-- 🟢 BOUTON FLOATING WHATSAPP VERT OFFICIEL AVEC LIEN EN DUR -->
-    <a href="https://wa.me" class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 200; text-decoration: none; transition: 0.3s;">
-        <svg xmlns="http://w3.org" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.925h.004c4.368 0 7.926-3.559 7.93-7.93a7.9 7.9 0 0 0-2.327-5.567zm-5.607 11.3a6.6 6.6 0 0 1-3.34-.902l-.24-.144-2.486.652.665-2.421-.157-.251a6.6 6.6 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-        </svg>
+            <div class="footer-bottom-info">
+                <p>© 2026 GAMEDOCK 3D. Tous droits réservés. <br><span>Imprimé avec passion au Maroc 🇲🇦</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/212664601352?text=Bonjour%20GameDock%203D" class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- STRUCTURE JAVASCRIPT EMEDDED -->
     <script>
     const gamedockCatalog = {
         collector: [
-            { id: 'col1', title: 'Support Kratos Premium (Phare)', price: 349, img: 'kratos' },
-            { id: 'col2', title: 'Support Danzo Edition', price: 399, img: 'danzo' },
-            { id: 'col3', title: 'Support The Black Hero Edition', price: 349, img: 'the black hero' },
-            { id: 'col4', title: 'Support Ghost Collector', price: 349, img: 'ghost' },
-            { id: 'col5', title: 'Support Naruto Shippuden', price: 349, img: 'naruto' },
-            { id: 'col6', title: 'Support Black Myth Wukong', price: 349, img: 'wukong' },
-            { id: 'col7', title: 'Support The Last Of Us', price: 349, img: 'thelastofus' },
-            { id: 'col8', title: 'Support Star Wars Edition', price: 349, img: 'star wars 1' },
-            { id: 'col9', title: 'Support Omega Special', price: 349, img: 'omega' },
-            { id: 'col10', title: 'Support Warrior Edition', price: 349, img: 'warrior' },
-            { id: 'col11', title: 'Support Leon Edition', price: 349, img: 'leon' },
-            { id: 'col12', title: 'Support Dragon Rock', price: 349, img: 'dragon' },
-            { id: 'col13', title: 'Support FC25 Limited', price: 349, img: 'fc25' },
-            { id: 'col14', title: 'Support GOW Kratos', price: 349, img: 'gow' },
-            { id: 'col15', title: 'Support Minecraft Block', price: 349, img: 'mainecraft' },
-            { id: 'col16', title: 'Support PS5 Classic', price: 349, img: 'ps5' }
+            { title: 'Support Danzo - Sharingan Hand', price: 349, img: 'danzo.jpeg.jpeg' },
+            { title: 'Support Captain America - Collector', price: 349, img: 'captain.jpeg' },
+            { title: 'Support Kratos - God of War Edition', price: 349, img: 'kratos.jpeg' },
+            { title: 'Support Batman - The Dark Knight (Solo)', price: 349, img: 'the black hero 3.jpeg' },
+            { title: 'Support PlayStation 5 Classic', price: 349, img: 'ps5.jpeg' },
+            { title: 'Support Batman - Gotham Protector (Double)', price: 349, img: 'the black hero 2.jpeg' },
+            { title: 'Support Omega Neon Red', price: 349, img: 'omega.jpeg' },
+            { title: 'Support PlayStation Retro White', price: 349, img: 'ps1 white.jpeg' },
+            { title: 'Gamedock Duo - Carbon & Red', price: 349, img: '2 in 1 black and red.jpeg' },
+            { title: 'Support God of War - Kratos Edition', price: 349, img: 'kratos with socle.jpeg' },
+            { title: 'Support Spider-Man - Iron Spider', price: 349, img: 'grey.jpeg' },
+            { title: 'Support Cyberpunk - White & Gold Luxury', price: 349, img: 'white gold.jpeg' },
+            { title: 'Support PlayStation 5 DualTone', price: 349, img: 'ps5 b and w.jpeg' },
+            { title: 'Support The Last Of Us - Post-Apocalyptic', price: 349, img: 'thelastofus.jpeg' },
+            { title: 'Support Danzo - Onyx Black Edition', price: 349, img: 'bblack hand.jpeg' },
+            { title: 'Gamedock Duo Xbox - Stealth Carbon (V2)', price: 349, img: 'xbox 2 in 1 v2.jpeg' },
+            { title: 'Gamedock Duo PS5 - Onyx Shadow', price: 349, img: 'ps 2 in 1 black.jpeg' },
+            { title: 'Gamedock Duo Xbox - Classic Dark', price: 349, img: 'xbox 2 in 1.jpeg' }
         ],
         stone: [
-            { id: 'st1', title: 'Support Kratos Stone (Phare)', price: 249, img: 'kratos 1 color' },
-            { id: 'st2', title: 'Support Kratos On Kness', price: 249, img: 'kratos on kness' },
-            { id: 'st3', title: 'Support Scorpion Edition', price: 249, img: 'scorpion' },
-            { id: 'st4', title: 'Support Star Wars Classic', price: 249, img: 'star wars' },
-            { id: 'st5', title: 'Support Masque Grey', price: 249, img: 'masque grey' },
-            { id: 'st6', title: 'Support Masque Black', price: 249, img: 'masque black' },
-            { id: 'st7', title: 'Support Masque Red', price: 249, img: 'masque red' }
+            { title: 'Support Oni Mask - Shadow Grey', price: 249, img: 'masque black.jpeg' },
+            { title: 'Support FC25 Arena Edition', price: 249, img: 'fc25.jpeg' },
+            { title: 'Support Iron Throne - Westeros Edition', price: 249, img: 'gameofthrone.jpeg' },
+            { title: 'Support Low-Poly Skull - Marble White', price: 249, img: 'white head.jpeg' },
+            { title: 'Support Dragon Shenron - Stone Carved', price: 249, img: 'dragon.jpeg' },
+            { title: 'Gamedock Duo PS4 - Stone Grey', price: 249, img: 'ps4 2 in 1.jpeg' },
+            { title: 'Support PlayStation 5 Minimalist Grey', price: 249, img: 'ps 5 -2.jpeg' },
+            { title: 'Support Oni Mask - Crimson Stone', price: 249, img: 'masque red.jpeg' },
+            { title: 'Support Leon - Biohazard Edition', price: 249, img: 'leon.jpeg' },
+            { title: 'Support God of War - Spartan Monolith', price: 249, img: 'kratos 1 color.jpeg' }
         ],
         classics: [
-            { id: 'cls1', title: 'Support Bleu PS Console', price: 199, img: 'bleu ps console' },
-            { id: 'cls2', title: 'Support Call of Duty', price: 199, img: 'call of dutty' },
-            { id: 'cls3', title: 'Support FC 25 Classic', price: 199, img: 'fc 25' },
-            { id: 'cls4', title: 'Support Spiderman Edition', price: 199, img: 'spiderman' }
+            { title: 'Support Naruto - Konoha Hidden Leaf', price: 199, img: 'naruto.jpeg' },
+            { title: 'Support Fortnite - Battle Royale Edition', price: 199, img: 'fortnite.jpeg' },
+            { title: 'Support Minecraft - Creeper Face', price: 199, img: 'mainecraft.jpeg' },
+            { title: 'Support Fortnite - Drop Zone (Jaune)', price: 199, img: 'fortnite 1.jpeg' },
+            { title: 'Support God of War - Omega Runes', price: 199, img: 'gow.jpeg' },
+            { title: 'Support GTA V - Los Santos Edition', price: 199, img: 'gta V.jpeg' },
+            { title: 'Support Kratos - Kneeling Warrior', price: 199, img: 'kratos on kness.jpeg' },
+            { title: 'Support Minecraft - Diamond Block V1', price: 199, img: 'minecraft bock 1.jpeg' },
+            { title: 'Support Minecraft - Redstone Ore V2', price: 199, img: 'minecraft bock 2.jpeg' },
+            { title: 'Support Gamedock Mural - Wall Mount', price: 199, img: 'mural.jpeg' }
         ],
-        casques: [
-            { id: 'csq1', title: 'Support Casque Empty Head V1', price: 549, img: 'support casque empty head v1' },
-            { id: 'csq2', title: 'Support Casque Empty Head V2', price: 549, img: 'support casque empty head v2' },
-            { id: 'csq3', title: 'Support Casque Kratos V1', price: 549, img: 'support casque kratos v1' },
-            { id: 'csq4', title: 'Support Casque Kratos V2', price: 549, img: 'support casque kratos v2' },
-            { id: 'csq5', title: 'Support Casque Spiderman Black and White', price: 549, img: 'support casque spiderman black and white' },
-            { id: 'csq6', title: 'Support Casque Spiderman Black', price: 549, img: 'support casque spiderman black' },
-            { id: 'csq7', title: 'Support Casque Star Wars', price: 549, img: 'support casque star wars' },
-            { id: 'csq8', title: 'Support Casque Walter White', price: 549, img: 'support casque Walter White' }
+        iconic: [
+            { title: 'Buste Casque Kratos - Spartan War (Couleur)', price: 549, img: 'support casque kratos v1.jpeg' },
+            { title: 'Buste Casque Stormtrooper - Galactic Empire', price: 549, img: 'support casque star wars.jpeg' },
+            { title: 'Support Casque Glass Head - Horizon Blue', price: 549, img: 'support casque empty head v1.jpeg' },
+            { title: 'Support Casque Glass Head - Crimson Red', price: 549, img: 'support casque empty head v2.jpeg' },
+            { title: 'Buste Casque Kratos - Stone Monolith', price: 549, img: 'support casque kratos v2.jpeg' },
+            { title: 'Buste Casque Heisenberg - Breaking Bad', price: 549, img: 'support casque Walter White.jpeg' }
+        ],
+        rare: [
+            { title: 'Buste Casque Spiderman - Hybrid DualTone', price: 499, img: 'support casque spiderman black and white.jpeg' },
+            { title: 'Buste Casque Hulk - Gamma Power Edition', price: 499, img: 'hulk.jpeg' },
+            { title: 'Support Casque Fortnite - Victory Royale', price: 499, img: 'fortnite caque.jpeg' },
+            { title: 'Buste Casque Spiderman - Symbiote Black', price: 499, img: 'support casque spiderman black.jpeg' }
         ]
     };
-    let limitCollector = 5;
-    let limitStone = 5;
-    let limitClassics = 5;
-    let timerCarousel;
 
-    function setupStoreFront() {
-        const gridCollector = document.getElementById('grid-collector');
-        if (gridCollector) {
-            gridCollector.innerHTML = renderGridHTML(gamedockCatalog.collector.slice(0, limitCollector));
-            const btn = document.getElementById('see-more-collector');
-            if (btn) btn.style.display = gamedockCatalog.collector.length > limitCollector ? 'block' : 'none';
-        }
+    let expandedSections = { collector: false, stone: false, classics: false, iconic: false, rare: false };
 
-        const gridStone = document.getElementById('grid-stone');
-        if (gridStone) {
-            gridStone.innerHTML = renderGridHTML(gamedockCatalog.stone.slice(0, limitStone));
-            const btn = document.getElementById('see-more-stone');
-            if (btn) btn.style.display = gamedockCatalog.stone.length > limitStone ? 'block' : 'none';
-        }
-
-        const gridClassics = document.getElementById('grid-classics');
-        if (gridClassics) {
-            gridClassics.innerHTML = renderGridHTML(gamedockCatalog.classics.slice(0, limitClassics));
-            const btn = document.getElementById('see-more-classics');
-            if (btn) btn.style.display = gamedockCatalog.classics.length > limitClassics ? 'block' : 'none';
-        }
-
-        const gridCasques = document.getElementById('grid-casques');
-        if (gridCasques) gridCasques.innerHTML = renderGridHTML(gamedockCatalog.casques);
-
-        initHeroCarousel();
-    }
-
-    function initHeroCarousel() {
-        const slides = document.querySelectorAll('.hero-product-showcase-card');
+    // SCRIPT DU HERO SLIDER
+    let currentSlideIndex = 0;
+    function showSlides(index) {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
         if (slides.length === 0) return;
-
-        slides.forEach((slide, idx) => {
-            if(idx === 0) slide.classList.add('active');
-            else slide.classList.remove('active');
-        });
-
-        clearInterval(timerCarousel);
-        timerCarousel = setInterval(function() {
-            defilerSlide(1);
-        }, 3500);
-    }
-
-    function defilerSlide(direction) {
-        const slides = document.querySelectorAll('.hero-product-showcase-card');
-        if (slides.length === 0) return;
-
-        let indexActuel = 0;
-        for (let i = 0; i < slides.length; i++) {
-            if (slides[i].classList.contains('active')) {
-                indexActuel = i;
-                break;
-            }
-        }
-
-        slides[indexActuel].classList.remove('active');
-        let nouvelIndex = (indexActuel + direction + slides.length) % slides.length;
         
-        if (slides[nouvelIndex]) {
-            slides[nouvelIndex].classList.add('active');
-        }
+        if (index >= slides.length) currentSlideIndex = 0;
+        if (index < 0) currentSlideIndex = slides.length - 1;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[currentSlideIndex].classList.add('active');
+        if(dots[currentSlideIndex]) dots[currentSlideIndex].classList.add('active');
+    }
+    
+    function moveSlide(step) {
+        currentSlideIndex += step;
+        showSlides(currentSlideIndex);
+    }
+    
+    function currentSlide(index) {
+        currentSlideIndex = index;
+        showSlides(currentSlideIndex);
     }
 
-    function changerSlideManuel(direction) {
-        defilerSlide(direction);
-        initHeroCarousel();
+    // GENERATION DYNAMIQUE CATALOGUE
+    function genererBoutique() {
+        renderCollection('collector', gamedockCatalog.collector);
+        renderCollection('stone', gamedockCatalog.stone);
+        renderCollection('classics', gamedockCatalog.classics);
+        renderCollection('iconic', gamedockCatalog.iconic);
+        renderCollection('rare', gamedockCatalog.rare);
+        showSlides(currentSlideIndex);
     }
 
-    function scrollerVersProduits() {
-        const section = document.getElementById('catalogue-section');
-        if (section) section.scrollIntoView({ behavior: 'smooth' });
-    }
+    function renderCollection(key, fullList) {
+        const gridElement = document.getElementById(`grid-${key}`);
+        if (!gridElement) return;
 
-    function chargerPlusCollector() { limitCollector = gamedockCatalog.collector.length; setupStoreFront(); }
-    function chargerPlusStone() { limitStone = gamedockCatalog.stone.length; setupStoreFront(); }
-    function chargerPlusClassics() { limitClassics = gamedockCatalog.classics.length; setupStoreFront(); }
-
-    function renderGridHTML(productsList) {
-        return productsList.map(item => {
-            let imageSrc = item.img + ".jpg";
-            if (item.img === "danzo") { imageSrc = "danzo.jpeg.jpeg"; }
-            if (item.img === "call of duty") { imageSrc = "call of dutty.jpeg"; }
-
+        const itemsToRender = expandedSections[key] ? fullList : fullList.slice(0, 3);
+        
+        let htmlContent = itemsToRender.map(item => {
+            let oldPrice = item.price + 100;
             return `
                 <div class="product-card">
                     <div class="product-img-box">
-                        <img src="${imageSrc}" alt="${item.title}" class="store-img" onclick="ouvrirImageEnGrand(this.src)" onerror="tryAlternativeExtensions(this, '${item.img}')">
+                        <img src="${item.img}" alt="${item.title}" class="store-img" onerror="this.src='logo.png'">
                     </div>
                     <h4>${item.title}</h4>
-                    <div class="product-card-price">à seulement ${item.price} DH <br><span style="font-size:0.75rem; font-weight:normal; color:#a9b7c6;">(Livraison incluse)</span></div>
-                    <button class="buy-action-btn" onclick="ouvrirFormulaireCommande('${item.title}', ${item.price})">Commander maintenant</button>
+                    <div class="product-card-price">
+                        <span class="old-price-label">${oldPrice} DH</span>
+                        <strong>${item.price} DH</strong>
+                    </div>
+                    <button class="buy-action-btn" onclick="ouvrirFormulaireCommande('${item.title}', ${item.price})">🛒 En 1 clic</button>
                 </div>
             `;
         }).join('');
+
+        if (fullList.length > 3 && !expandedSections[key]) {
+            htmlContent += `
+                <div class="see-more-card-trigger" onclick="toggleExpandSection('${key}')">
+                    <div class="see-more-icon-box">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <span>Voir plus (+${fullList.length - 3})</span>
+                </div>
+            `;
+        }
+
+        gridElement.innerHTML = htmlContent;
     }
 
-    function tryAlternativeExtensions(imgElement, baseName) {
-        const currentSrc = imgElement.src;
-        if (currentSrc.endsWith('.jpg')) { imgElement.src = baseName + '.jpeg'; } 
-        else if (currentSrc.endsWith('.jpeg')) { imgElement.src = baseName + '.png'; } 
-        else if (currentSrc.endsWith('.png')) { imgElement.src = baseName + '.JPG'; } 
-        else if (currentSrc.endsWith('.JPG')) { imgElement.src = baseName + '.PNG'; } 
-        else if (currentSrc.endsWith('.PNG')) { imgElement.src = baseName + '.JPEG'; } 
-        else { imgElement.onerror = null; imgElement.src = 'logo.jpeg'; }
+    function toggleExpandSection(key) {
+        expandedSections[key] = true;
+        renderCollection(key, gamedockCatalog[key]);
     }
 
-    function ouvrirFormulaireCommande(productTitle, productPrice) {
-        document.getElementById('form-product-title').value = productTitle;
-        document.getElementById('form-product-price').value = productPrice;
-        document.getElementById('modal-product-subtitle').innerText = `Produit : ${productTitle}`;
-        document.getElementById('form-total-price').innerText = `${productPrice} DH (Livraison incluse)`;
+    function ouvrirFormulaireCommande(title, price) {
+        document.getElementById('form-product-title').value = title;
+        document.getElementById('form-product-price').value = price;
+        document.getElementById('modal-product-subtitle').innerText = `Produit : ${title}`;
+        document.getElementById('form-total-price').innerText = `${price} DH`;
         document.getElementById('order-modal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     }
 
-    // 🟢 إصلاح دالة الإرسال لـ GOOGLE SHEETS بشكل مباشر ومضمون 100%
+    function fermerFormulaireCommande() { 
+        document.getElementById('order-modal').style.display = 'none'; 
+        document.body.style.overflow = 'auto';
+    }
+    
+    function switchBoutiqueTab(category) {
+        document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+        document.getElementById(`tab-${category}`).classList.add('active');
+        document.getElementById(`btn-${category}`).classList.add('active');
+    }
+
     function envoyerCommandeGoogleSheets() {
         const title = document.getElementById('form-product-title').value;
         const price = document.getElementById('form-product-price').value;
@@ -482,55 +407,34 @@ src="https://www.facebook.com/tr?id=972202135444394&ev=PageView&noscript=1"
         const phone = document.getElementById('client-phone').value;
         const city = document.getElementById('client-city').value;
         const address = document.getElementById('client-address').value;
-        
+
         if (!name.trim() || !phone.trim() || !city.trim() || !address.trim()) {
-            alert("Veuillez remplir tous les champs du formulaire s'il vous plaît.");
+            alert("Veuillez remplir tous les champs.");
             return;
         }
-        const btn = document.getElementById('btn-whatsapp-link');
-        if (btn) btn.innerHTML = 'Envoi en cours...';
 
-        // تجميع البيانات المتوافقة تماماً مع الـ Script الخاص بك
-        const packageData = { 
-            produit: title, 
-            prix: price + " DH", 
-            nom: name, 
-            telephone: phone, 
-            ville: city, 
-            adresse: address 
-        };
+        const btn = document.getElementById('btn-submit-order');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement sécurisé...';
 
-const googleScriptURL = "https://script.google.com/macros/s/AKfycbyFHW_0gM7GMdfxtwn1o3oyRoGct_wavcAii88bx1wvCl0qxCgG0QOjQDF2AtLt6T-B7A/exec";
+        const dataPayload = { produit: title, prix: price + " DH", nom: name, telephone: phone, ville: city, adresse: address };
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxv48-gOa0nx5EBAiV2r92a6db06OXNe0fKA4s26i8gl_kE2jBwB-gqHVW-8o3UepmK/exec";
 
-
-        fetch(googleScriptURL, { 
-            method: 'POST', 
-            mode: 'no-cors', 
-            headers: { 'Content-Type': 'text/plain' }, 
-            body: JSON.stringify(packageData) 
-        })
+        fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(dataPayload) })
         .then(() => {
-            if (btn) btn.innerHTML = '✓ Commande reçue !';
-            setTimeout(function() { 
-                document.getElementById('order-modal').style.display = 'none'; 
-                document.getElementById('client-name').value = ""; 
-                document.getElementById('client-phone').value = "";
-                document.getElementById('client-city').value = ""; 
-                document.getElementById('client-address').value = "";
-            }, 1200);
+            btn.innerHTML = '✓ COMMANDE RÉUSSIE !';
+            setTimeout(() => {
+                document.getElementById('order-modal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+                window.location.href = "thankyou.html";
+            }, 800);
         })
-        .catch(err => {
-            alert("Erreur lors de l'envoi, veuillez réessayer.");
-            if (btn) btn.innerHTML = 'Erreur';
+        .catch(() => {
+            alert("Erreur réseau, réessayez.");
+            btn.innerHTML = '💥 CONFIRMER MA COMMANDE';
         });
     }
 
-    function fermerFormulaireCommande() { document.getElementById('order-modal').style.display = 'none'; }
-    function ouvrirImageEnGrand(src) { const lb = document.getElementById('image-lightbox'); const lbi = document.getElementById('lightbox-target-img'); if (lb && lbi) { lbi.src = src; lb.style.display = 'flex'; } }
-    function fermerImageEnGrand() { document.getElementById('image-lightbox').style.display = 'none'; }
-    function switchBoutiqueTab(tab) { document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active')); document.querySelectorAll('.tab-button').forEach=function(b){}; document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active')); const tt = document.getElementById(`tab-${tab}`); const tb = document.getElementById(`btn-${tab}`); if (tt) tt.classList.add('active'); if (tb) tb.classList.add('active'); }
-    
-    document.addEventListener('DOMContentLoaded', setupStoreFront);
+    document.addEventListener('DOMContentLoaded', genererBoutique);
     </script>
 </body>
 </html>

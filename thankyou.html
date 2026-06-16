@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Validée ! - GAMEDOCK 3D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour la page de succès */
+        .thankyou-wrapper {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .thankyou-card {
+            background-color: #0b0c10;
+            border: 2px solid #66fcf1;
+            box-shadow: 0 0 30px rgba(102, 252, 241, 0.2);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            max-width: 550px;
+            width: 100%;
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #25d366;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        .thankyou-card h1 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .thankyou-card h1 span {
+            color: #66fcf1;
+        }
+        .thankyou-card p {
+            color: #ffffff;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .whatsapp-notice-box {
+            background-color: rgba(37, 211, 102, 0.1);
+            border: 1px dashed #25d366;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        .whatsapp-notice-box p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .btn-back-store {
+            display: inline-block;
+            background-color: transparent;
+            color: #66fcf1;
+            border: 1px solid #66fcf1;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+        .btn-back-store:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); border-radius: 50%; }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Gamedock3d" class="brand-logo" onerror="this.src='https://via.placeholder.com/50'">
+            <div class="brand-names">
+                <span class="main-title">GAMEDOCK 3D</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="thankyou-wrapper">
+        <div class="thankyou-card">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Commande <span>Confirmée !</span></h1>
+            <p>Merci pour votre confiance ! Votre demande a été enregistrée avec succès. Notre équipe va préparer votre colis avec soin.</p>
+            
+            <div class="whatsapp-notice-box">
+                <p><i class="fab fa-whatsapp" style="color: #25d366;"></i> Un agent va vous contacter sur WhatsApp pour valider les détails de l'expédition.</p>
+                <a href="https://wa.me/212664601352?text=Bonjour%20GameDock%203D%2C%20je%20viens%20de%20passer%20une%20commande%20sur%20le%20site." target="_blank" class="social-badge wa-badge" style="min-width: unset; width: 100%;">
+                    Accélérer ma livraison sur WhatsApp
+                </a>
+            </div>
+
+            <a href="index.html" class="btn-back-store">
+                <i class="fas fa-arrow-left"></i> Retourner à la boutique
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
