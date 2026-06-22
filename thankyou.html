@@ -9,13 +9,23 @@
 
       gtag('config', 'AW-18254791977');
     </script>
-<script>
-      // On génère un faux numéro de commande aléatoire pour qu'Analytics compte bien chaque visite comme une vente unique
+
+    <script>
+      // Génère un faux numéro de commande pour éviter les doublons de statistiques
       let numeroCommande = "CMD-" + Math.floor(Math.random() * 100000);
 
+      // Envoi de la conversion spécifique à Google Ads (Ton code exact)
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18254791977/5Nn_CL3m38McEKmKyIBE',
+          'value': 349.00,
+          'currency': 'MAD',
+          'transaction_id': numeroCommande
+      });
+
+      // Envoi de l'achat à Google Analytics pour remplir ton tableau de bord e-commerce
       gtag('event', 'purchase', {
           transaction_id: numeroCommande,
-          value: 349.00, // Valeur par défaut de la commande
+          value: 349.00,
           currency: "MAD",
           items: [
             {
@@ -24,16 +34,6 @@
               quantity: 1
             }
           ]
-      });
-    </script>
-    <script>
-      // Si tu as choisi la "Méthode B" (via le code), remplace REMPLACER_PAR_TON_ID 
-      // par le code spécifique que Google Ads te donne pour l'action d'achat.
-      // Si tu as choisi la "Méthode A" (règle par URL), tu peux laisser ce code tel quel 
-      // ou le supprimer, la balise globale fera le travail toute seule !
-      
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18254791977/REMPLACER_PAR_TON_ID'
       });
     </script>
 
